@@ -3,6 +3,12 @@ set -ex
 
 echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
 
+echo "Will install gem via Bundler"
+bundle install --path vendor/bundle
+
+bundle exec ruby ./src/main.rb
+
+
 #
 # --- Export Environment Variables for other Steps:
 # You can export Environment Variables for other Steps with

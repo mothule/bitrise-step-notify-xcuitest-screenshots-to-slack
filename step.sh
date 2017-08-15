@@ -6,6 +6,7 @@ echo "This is the value specified for the input 'example_step_input': ${example_
 echo "Will install gem via Bundler"
 bundle install --path vendor/bundle
 
+echo "Start Ruby script"
 bundle exec ruby ./src/main.rb
 
 

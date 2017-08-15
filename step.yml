@@ -8,11 +8,11 @@
 # - Bitrise CLI guides: http://devcenter.bitrise.io/bitrise-cli/
 
 title: |-
-  notify xcuitest screenshots to slack
+  Notify XCUITest's Screenshots to Slack
 summary: |
-  Notify like montage xcuitest screenshots to a slack.
+  The step will notify XCUITest Screenshots to a Slack.
 description: |
-  screenshots sort by timestamp. will remove if the same image as before.
+  First, sort screen shots in time stamp order. Next step will remove if the same image as before.
 website: https://github.com/mothule/bitrise-step-notify-xcuitest-screenshots-to-slack
 source_code_url: https://github.com/mothule/bitrise-step-notify-xcuitest-screenshots-to-slack
 support_url: https://github.com/mothule/bitrise-step-notify-xcuitest-screenshots-to-slack/issues
@@ -29,8 +29,8 @@ host_os_tags:
 # You can find more information about project type tags in the Step Development Guideline:
 # https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
 #
-# project_type_tags:
-#   - ios
+project_type_tags:
+  - ios
 #   - macos
 #   - android
 #   - xamarin

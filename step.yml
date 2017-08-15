@@ -43,6 +43,8 @@ project_type_tags:
 # https://github.com/bitrise-io/bitrise/blob/master/_docs/step-development-guideline.md
 type_tags:
   - notification
+  - test
+  - artifact-info
 
 is_requires_admin_user: true
 is_always_run: false
@@ -62,10 +64,21 @@ toolkit:
   bash:
     entry_file: step.sh
 
-
 inputs:
+  - working_dir: "$BITRISE_SOURCE_DIR"
+    opts:
+      category: Config
+      title: "Working directory"
+      description: |
+        This directory will be set as the current working
+        directory for the script.
+        Any relative path in the Script (content) will be
+        relative to this directory.
+      is_expand: true
+      is_required: true
   - example_step_input: Default Value - you can leave this empty if you want to
     opts:
+      category: Config
       title: "Example Step Input"
       summary: Summary. No more than 2-3 sentences.
       description: |

@@ -72,12 +72,10 @@ inputs:
         This token will use for notification to Slack channels.
       is_expand: true
       is_required: true
-      
   - slack_channels: "random, general"
       title: "Slack Channels"
       is_expand: true
       is_required: true
-
   - input_file_path: ""
     opts:
       category: Config
@@ -89,13 +87,11 @@ inputs:
         Can be Markdown formatted text.
       is_expand: true
       is_required: true
-
   - output_file_name: "output.jpg"
     opts:
       category: Config
       title: "File name of generated image"
       is_expand: true
-
 outputs:
   - EXAMPLE_STEP_OUTPUT:
     opts:

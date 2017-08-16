@@ -2,10 +2,19 @@ require 'rubygems'
 require 'bundler/setup'
 require 'pipes'
 
-ZIP_FILE_PATH = ENV[:input_file_path]
-OUTPUT_NAME_PATH = ENV[:output_file_path] || '../output.jpg'
-SLACK_API_TOKEN = ENV[:slack_api_token]
-CHANNELS = ENV[:channels]
+unless ARGV.size == 4
+  p 'You should specify 4 arguments.'
+  p 'argv 0 is slack api token'
+  p 'argv 1 is slack channels'
+  p 'argv 2 is input file path'
+  p 'argv 3 is output file name'
+  exit 1
+end
+
+SLACK_API_TOKEN = ARGV[0]
+CHANNELS = ARGV[1]
+ZIP_FILE_PATH = ARGV[2]
+OUTPUT_NAME_PATH = "../#{ARGV[3]}".freeze
 
 exit 1 unless validate_args(ZIP_FILE_PATH,
                             OUTPUT_NAME_PATH,

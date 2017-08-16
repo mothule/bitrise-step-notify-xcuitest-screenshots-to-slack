@@ -72,7 +72,8 @@ inputs:
         This token will use for notification to Slack channels.
       is_expand: true
       is_required: true
-  - slack_channels: "random, general"
+  - slack_channels: "random"
+    opts:
       title: "Slack Channels"
       is_expand: true
       is_required: true

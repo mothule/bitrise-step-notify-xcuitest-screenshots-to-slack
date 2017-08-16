@@ -4,7 +4,9 @@ set -ex
 echo "This is the value specified for the input 'example_step_input': ${example_step_input}"
 
 echo "Will install gem via Bundler"
+cd src
 bundle install --path vendor/bundle
+cd ..
 
 echo "Start Ruby script"
 bundle exec ruby ./src/main.rb
